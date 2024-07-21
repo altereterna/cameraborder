@@ -1,0 +1,44 @@
+/* Import a pixel art font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Container for the camera feed */
+#camera-container {
+    position: relative;
+    width: 440px;  /* size */
+    height: 360px; /* size */
+    overflow: hidden;
+    border: 8px solid transparent; /* Initial transparent border */
+    background: linear-gradient(to bottom, #2d2d2d 0%, #1a1a1a 100%);
+    box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    animation: Border 2s steps(8) infinite;
+}
+
+/* Camera feed styling */
+#camera-feed {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* border */
+@keyframes Border {
+    0%, 100% {
+        border-color: #d3d3d3; /* LightGray */
+    }
+    25% {
+        border-color: #a9a9a9; /* DarkGray */
+    }
+    50% {
+        border-color: #808080; /* Gray */
+    }
+    75% {
+        border-color: #696969; /* DimGray */
+    }
+}
+
+/* Ensure the content is pixelated */
+body {
+    image-rendering: pixelated;
+}
